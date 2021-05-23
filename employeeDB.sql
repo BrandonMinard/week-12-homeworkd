@@ -50,11 +50,14 @@ CREATE TABLE employee (
 INSERT INTO department(name)
 VALUES ("sales"), ("marketing"), ("IT");
 INSERT INTO role(title, salary, department_id)
-VALUES ("Intern", 30.0, 1), ("Intern", 30.0, 2), ("Intern", 30.0, 3),
-("Manager", 60.5, 1), ("Manager", 60.5, 2), ("Manager", 60.5, 3),
-("Technician", 40.5, 1), ("Technician", 40.5, 2), ("Technician", 40.5, 3);
+VALUES ("Telemarketer", 30.0, 1), ("Ad Guy", 30.0, 2), ("IT Intern", 30.0, 3),
+("Sales Professional", 40.5, 1), ("Marketing Coordinator", 40.5, 2), ("IT Overseer", 40.5, 3),
+("Sales Executive", 60.5, 1), ("Marketing Executive", 60.5, 2), ("IT Professional Technician", 60.5, 3);
+
+
+
 insert INTO EMPLOYEE(first_name, last_name, role_id, manager_id)
 VALUES ("manager", "sales", 4, null), ("manager", "marketing", 5, null),
-("manager", "IT", 6, null), ("technician", "sales", 7, null),
-("technician", "marketing", 8, null), ("technician", "IR", 9, null),
-("intern", "sales", 1, null), ("technician", "marketing", 2, null),("technician", "IT", 3, null);
+("manager", "IT", 6, null), ("technician", "sales", 7, 1),
+("technician", "marketing", 8, 2), ("technician", "IR", 9, 3),
+("intern", "sales", 1, 1), ("intern", "marketing", 2, 2),("intern", "IT", 3, 3);
