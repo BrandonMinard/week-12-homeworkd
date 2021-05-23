@@ -12,23 +12,18 @@ const connection = mysql.createConnection({
 
 
 
-// Build a command-line application that at a minimum allows the user to:
+//All this is functional, mostly
 
 //   * Add departments, roles, employees
-
 //   * View departments, roles, employees
-
+// (couldn't figure out a good way to select all employees including managers in a single query.)
 //   * Update employee roles
-
-// Bonus points if you're able to:
-
 //   * Update employee managers
-
 //   * View employees by manager
-
 //   * Delete departments, roles, and employees
 
-//   * View the total utilized budget of a department -- ie the combined salaries of all employees in that department
+
+//This all tends to follow the pattern of getting data, presenting it by name or title in an inquirer thing for the user to select, and then doing something else with that target.
 
 //Only employees with managers :/
 const findEmployeeSelector = `SELECT 
@@ -48,7 +43,7 @@ INNER JOIN role ON employee.role_id = role.id
 INNER JOIN department ON department.id = role.department_id
 WHERE manager_id IS NULL`
 
-
+//Entry point inquire
 const init = () => {
     inquirer.prompt({
         type: 'list',
@@ -128,6 +123,7 @@ connection.connect(function (err) {
     init()
 });
 
+//What is says on the tin.
 function messWithDepartmentsByParam(param) {
     if (param === "add") {
         inquirer.prompt([{
