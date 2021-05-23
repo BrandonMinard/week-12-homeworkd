@@ -48,16 +48,16 @@ CREATE TABLE employee (
 );
 
 INSERT INTO department(name)
-VALUES ("sales"), ("marketing"), ("IT");
+VALUES ("Sales"), ("Marketing"), ("IT");
 INSERT INTO role(title, salary, department_id)
-VALUES ("Telemarketer", 30.0, 1), ("Ad Guy", 30.0, 2), ("IT Intern", 30.0, 3),
-("Sales Professional", 40.5, 1), ("Marketing Coordinator", 40.5, 2), ("IT Overseer", 40.5, 3),
-("Sales Executive", 60.5, 1), ("Marketing Executive", 60.5, 2), ("IT Professional Technician", 60.5, 3);
+VALUES ("Telemarketer", 20.0, 1), ("Ad Guy", 15.0, 2), ("IT Intern", 20.5, 3),
+("Sales Professional", 40.5, 1), ("Marketing Coordinator", 47.5, 2), ("IT Overseer", 36.5, 3),
+("Sales Executive", 70.5, 1), ("Marketing Executive", 100.5, 2), ("IT Professional Technician", 60.5, 3);
 
 
 
 insert INTO EMPLOYEE(first_name, last_name, role_id, manager_id)
-VALUES ("manager", "sales", 4, null), ("manager", "marketing", 5, null),
-("manager", "IT", 6, null), ("technician", "sales", 7, 1),
-("technician", "marketing", 8, 2), ("technician", "IR", 9, 3),
-("intern", "sales", 1, 1), ("intern", "marketing", 2, 2),("intern", "IT", 3, 3);
+VALUES ("Silke", "Stefani", 4, null), ("Madyson", "Samuel", 5, null),
+("Beat", "Janneke", 6, null), ("Ignatios", "Christin", 7, 1),
+("Orfeas", "Serrena", 8, 2), ("Edelgard", "Jördis", 9, 3),
+("Randolph", "Tycho", 1, 1), ("Jacqui", "Tatiana", 2, 2),("Ashlea", "Gavriil", 3, 3);
