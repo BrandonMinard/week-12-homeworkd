@@ -299,6 +299,7 @@ function messWithEmployeesByParam(param) {
                             connection.query("DELETE FROM employee WHERE id = " + employeeObj[answer.choice], function (err, res) {
                                 if (err) throw err
                                 console.log(answer.choice + " Successfully deleted")
+                                init()
                             })
                         })
                         break;
@@ -526,7 +527,7 @@ function messWithRolesByParam(param) {
             default:
                 connection.query("SELECT * FROM employee_db.role;", function (err, res) {
                     console.table(res)
-                    init()
+                    init();
                 })
                 break;
         }
